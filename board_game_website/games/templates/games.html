@@ -3,7 +3,8 @@
 <h1>Games</h1>
 <ul>
 {% for games in games %}
-<li> {{ games }} </li>
+<li>Game: {{ games.name }} </li>
+<p>Reservation: {{ games.reservation }} </p>
 {% empty %}
 <li>No games have been added yet.</li>
 {% endfor %}
