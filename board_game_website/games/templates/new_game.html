@@ -4,7 +4,7 @@
 {% block content %}
     <p>Add a new book:</p>
 
-    <form action="{% url 'crazy_book_clubs: new_book' %}" method='post'>
+    <form action="{% url 'board_game_website: new_game' %}" method='post'>
         {% csrf_token %}
         {{ form.as_p }}
         <button name="submit">Add game</button>
