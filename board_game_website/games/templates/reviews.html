@@ -1,0 +1,15 @@
+{% extends "base.html" %}
+{% block content %}
+<p>Reviews</p>
+{% for reviews in reviews %} 
+<ul>
+<li>Game: {{ reviews.games }} </li>
+<p>{{ reviews }} </p>
+</ul>
+
+{% empty %}
+<li>No Reviews have been added yet.</li>
+{% endfor %}
+
+
+{% endblock content %}

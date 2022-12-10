@@ -6,12 +6,15 @@
     <ul>
     {% for games in games %}
     <li>Game: {{ games.name }} </li>
-    <p>Reservation: {{ games.reservation }} </p>
+    <p>{{ games.Modify_reservations }} </p>
+    
+    
     {% empty %}
     <li>No games have been added yet.</li>
     {% endfor %}
     </ul>
 
-    <a href="{% 'url board_game_website:new_game' %}">
+ 
+    
         
 {% endblock content %}

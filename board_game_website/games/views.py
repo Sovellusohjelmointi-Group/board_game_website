@@ -1,5 +1,6 @@
-from django.shortcuts import render
-from .models import Games
+from django.shortcuts import render, redirect
+from .models import Games, Review
+from .forms import GameForm
 
 
 def index(request):
@@ -20,4 +21,11 @@ def new_game(request):
             form.save()
             return redirect('board_game_website:games')
     context = {'form' : form}
-    return render(request, 'board_game_website/new_game.html', context)
+    return render(request, 'new_game.html', context)
+
+
+def reviews(request):
+
+    reviews = Review.objects.all()
+    return render(request, 'reviews.html',
+    {'reviews' : reviews})

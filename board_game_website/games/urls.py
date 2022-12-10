@@ -10,4 +10,6 @@ path('', views.index, name='index'),
 path('games/', views.games, name='games'),
 
 path('new_game/', views.new_game,name='new_game'),
+
+path('reviews/', views.reviews, name='reviews'),
 ]
